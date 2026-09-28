@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Something 💕</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-hearts">
+        <span>💕</span>
+        <span>💗</span>
+        <span>🌸</span>
+        <span>✨</span>
+        <span>💖</span>
+        <span>🦋</span>
+        <span>🌷</span>
+        <span>💞</span>
+    </div>
+
+    <!-- ================= ENVELOPE ================= -->
+
+    <section class="screen active" id="envelopeScreen">
+
+        <div class="envelope-wrapper">
+
+            <p class="small-text">Someone left you a little surprise...</p>
+
+            <div class="envelope" id="envelope">
+                <div class="envelope-back"></div>
+
+                <div class="letter">
+                    <div class="letter-content">
+                        <span>💌</span>
+                        <p>Open me</p>
+                    </div>
+                </div>
+
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+            </div>
+
+            <h1>A Little Something 💕</h1>
+            <p class="subtext">Click the envelope</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WELCOME ================= -->
+
+    <section class="screen" id="welcomeScreen">
+
+        <div class="card welcome-card">
+
+            <div class="anime-frame">
+                <img
+                    src="https://cdn.pixabay.com/photo/2024/02/09/18/10/ai-generated-8568796_1280.jpg"
+                    alt="Anime love illustration"
+                >
+            </div>
+
+            <div class="badge">🌸 A tiny journey for you 🌸</div>
+
+            <h1>Hey You 💗</h1>
+
+            <p>
+                I made this little website because I wanted to know
+                a few things about you...
+            </p>
+
+            <p class="cute-line">
+                And maybe there is a tiny surprise at the end 👀💕
+            </p>
+
+            <button class="main-btn" onclick="nextScreen('foodScreen')">
+                Let's Begin ✨
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOD ================= -->
+
+    <section class="screen" id="foodScreen">
+
+        <div class="card">
+
+            <span class="step">01 / 04</span>
+
+            <h1>First things first 🍕</h1>
+
+            <p>What's your favorite food?</p>
+
+            <div class="choice-grid">
+
+                <button class="choice" onclick="selectChoice('food','Pizza','foodScreen','placeScreen')">
+                    🍕
+                    <strong>Pizza</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('food','Burger','foodScreen','placeScreen')">
+                    🍔
+                    <strong>Burger</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('food','Momo','foodScreen','placeScreen')">
+                    🥟
+                    <strong>Momo</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('food','Noodles','foodScreen','placeScreen')">
+                    🍜
+                    <strong>Noodles</strong>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PLACE ================= -->
+
+    <section class="screen" id="placeScreen">
+
+        <div class="card">
+
+            <span class="step">02 / 04</span>
+
+            <h1>Where would you go? 🌎</h1>
+
+            <p>Pick your favorite kind of place.</p>
+
+            <div class="choice-grid">
+
+                <button class="choice image-choice"
+                        onclick="selectChoice('place','Beach','placeScreen','vibeScreen')">
+
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80">
+
+                    <strong>Beach 🌊</strong>
+                </button>
+
+                <button class="choice image-choice"
+                        onclick="selectChoice('place','Mountains','placeScreen','vibeScreen')">
+
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80">
+
+                    <strong>Mountains 🏔️</strong>
+                </button>
+
+                <button class="choice image-choice"
+                        onclick="selectChoice('place','City','placeScreen','vibeScreen')">
+
+                    <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&q=80">
+
+                    <strong>City 🌃</strong>
+                </button>
+
+                <button class="choice image-choice"
+                        onclick="selectChoice('place','Countryside','placeScreen','vibeScreen')">
+
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80">
+
+                    <strong>Countryside 🌿</strong>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= VIBE ================= -->
+
+    <section class="screen" id="vibeScreen">
+
+        <div class="card">
+
+            <span class="step">03 / 04</span>
+
+            <h1>What's your vibe? 🎧</h1>
+
+            <p>Choose the kind of music mood you love.</p>
+
+            <div class="choice-grid">
+
+                <button class="choice" onclick="selectChoice('vibe','Chill','vibeScreen','colorScreen')">
+                    🌙
+                    <strong>Chill</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('vibe','Romantic','vibeScreen','colorScreen')">
+                    💕
+                    <strong>Romantic</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('vibe','Happy','vibeScreen','colorScreen')">
+                    ☀️
+                    <strong>Happy</strong>
+                </button>
+
+                <button class="choice" onclick="selectChoice('vibe','Energetic','vibeScreen','colorScreen')">
+                    ⚡
+                    <strong>Energetic</strong>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLOR ================= -->
+
+    <section class="screen" id="colorScreen">
+
+        <div class="card">
+
+            <span class="step">04 / 04</span>
+
+            <h1>One more thing 🎨</h1>
+
+            <p>What's your favorite color?</p>
+
+            <div class="color-grid">
+
+                <button class="color-choice pink"
+                        onclick="selectChoice('color','Pink','colorScreen','quizIntroScreen')">
+                    💗
+                    <span>Pink</span>
+                </button>
+
+                <button class="color-choice purple"
+                        onclick="selectChoice('color','Purple','colorScreen','quizIntroScreen')">
+                    💜
+                    <span>Purple</span>
+                </button>
+
+                <button class="color-choice blue"
+                        onclick="selectChoice('color','Blue','colorScreen','quizIntroScreen')">
+                    💙
+                    <span>Blue</span>
+                </button>
+
+                <button class="color-choice green"
+                        onclick="selectChoice('color','Green','colorScreen','quizIntroScreen')">
+                    💚
+                    <span>Green</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ INTRO ================= -->
+
+    <section class="screen" id="quizIntroScreen">
+
+        <div class="card">
+
+            <div class="anime-frame small-anime">
+                <img
+                    src="https://cdn.pixabay.com/photo/2022/10/13/14/05/anime-7516341_1280.jpg"
+                    alt="Anime couple at sunset"
+                >
+            </div>
+
+            <div class="badge">💕 Okay... now the interesting part 💕</div>
+
+            <h1>A Tiny Flirting Quiz 👀</h1>
+
+            <p>
+                Just answer honestly.
+                No pressure, no wrong answers.
+            </p>
+
+            <p class="cute-line">
+                I just wanted to ask you a few cute questions... 🥺
+            </p>
+
+            <button class="main-btn" onclick="startQuiz()">
+                I'm Ready 💗
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUIZ ================= -->
+
+    <section class="screen" id="quizScreen">
+
+        <div class="card quiz-card">
+
+            <span class="step" id="quizNumber">Question 1 / 6</span>
+
+            <div class="quiz-anime">
+                <img id="quizImage"
+                     src="https://cdn.pixabay.com/photo/2024/02/09/18/10/ai-generated-8568796_1280.jpg"
+                     alt="Cute anime">
+            </div>
+
+            <h1 id="quizQuestion"></h1>
+
+            <div class="quiz-buttons">
+
+                <button class="yes-btn" onclick="answerQuiz(true)">
+                    Yes 💕
+                </button>
+
+                <button class="no-btn" onclick="answerQuiz(false)">
+                    No 🌸
+                </button>
+
+            </div>
+
+            <p id="quizReaction"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FINAL ================= -->
+
+    <section class="screen" id="finalScreen">
+
+        <div class="card final-card">
+
+            <div class="anime-frame">
+
+                <img
+                    src="https://cdn.pixabay.com/photo/2022/10/13/14/05/anime-7516341_1280.jpg"
+                    alt="Anime couple love illustration"
+                >
+
+            </div>
+
+            <div class="heart-big">💗</div>
+
+            <h1>Okay... one last thing.</h1>
+
+            <p class="final-message">
+                Maybe this little website was my
+                not-so-subtle way of saying...
+            </p>
+
+            <h2>I like you. 💕</h2>
+
+            <p>
+                Thanks for taking this little journey with me.
+            </p>
+
+            <div class="answer-summary">
+
+                <div>
+                    <span>🍕</span>
+                    <strong id="summaryFood">---</strong>
+                </div>
+
+                <div>
+                    <span>🌎</span>
+                    <strong id="summaryPlace">---</strong>
+                </div>
+
+                <div>
+                    <span>🎧</span>
+                    <strong id="summaryVibe">---</strong>
+                </div>
+
+                <div>
+                    <span>🎨</span>
+                    <strong id="summaryColor">---</strong>
+                </div>
+
+            </div>
+
+            <button class="main-btn" onclick="restart()">
+                Start Again 💞
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
